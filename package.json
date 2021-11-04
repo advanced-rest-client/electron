@@ -1,0 +1,80 @@
+{
+  "name": "@advanced-rest-client/electron",
+  "description": "Electron bindings for Advanced REST Client",
+  "version": "0.1.0",
+  "main": "main.js",
+  "module": "index.js",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Pawel Uchida-Psztyc",
+    "email": "pawel.psztyc@gmail.com"
+  },
+  "contributors": [
+    "Your name can be here!"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/advanced-rest-client/electron.git"
+  },
+  "bugs": {
+    "url": "https://github.com/advanced-rest-client/electron/issues",
+    "email": "arc@mulesoft.com"
+  },
+  "dependencies": {
+    "@advanced-rest-client/events": "^0.2.28",
+    "@advanced-rest-client/oauth": "^0.1.0",
+    "electron-store": "^8.0.1",
+    "esm": "^3.2.25",
+    "fs-extra": "^10.0.0",
+    "i18n": "^0.13.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.0",
+    "@babel/eslint-plugin": "^7.14.5",
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
+    "@types/chai": "^4.2.11",
+    "@types/chance": "^1.1.0",
+    "@types/i18n": "^0.13.1",
+    "@types/mocha": "^9.0.0",
+    "@types/sinon": "^10.0.6",
+    "chai": "^4.2.0",
+    "electron": "^15.3.0",
+    "electron-mocha": "^10.1.0",
+    "eslint": "^8.1.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-no-only-tests": "^2.4.0",
+    "get-port": "^6.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6",
+    "mocha": "^9.1.3",
+    "oauth2-mock-server": "^4.0.0",
+    "sinon": "^12.0.1",
+    "typescript": "^4.4.4"
+  },
+  "peerDependencies": {
+    "electron": "^15.3.0"
+  },
+  "scripts": {
+    "test": "npm run test:main && npm run test:renderer",
+    "test:renderer": "electron-mocha --renderer test/**/*.renderer.test.js",
+    "test:main": "electron-mocha test/**/*.main.test.js --timeout 10000",
+    "test:implicit": "electron-mocha test/implicit.main.test.js",
+    "test:password": "electron-mocha test/password.main.test.js",
+    "test:oidc": "electron-mocha test/oidc.main.test.js",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
+  }
+}
