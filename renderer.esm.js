@@ -1,4 +1,3 @@
-export { ArcHeaders } from './renderer/ArcHeaders.js';
 export { SocketRequest } from './request/SocketRequest.js';
 export { ElectronRequest } from './request/ElectronRequest.js';
 export { RequestOptions } from './request/RequestOptions.js';
