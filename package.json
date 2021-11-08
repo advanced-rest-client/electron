@@ -1,8 +1,8 @@
 {
   "name": "@advanced-rest-client/electron",
   "description": "Electron bindings for Advanced REST Client",
-  "version": "0.1.0",
-  "main": "main.js",
+  "version": "0.1.1",
+  "main": "index.js",
   "module": "index.js",
   "license": "Apache-2.0",
   "author": {

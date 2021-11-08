@@ -1,2 +1,1 @@
-require = require('esm')(module);
-module.exports = require('./renderer.esm.js');
+module.exports = require('esm')(module)('./renderer.esm.js');

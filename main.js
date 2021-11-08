@@ -1,2 +1,1 @@
-require = require('esm')(module);
-module.exports = require('./index.js');
+module.exports = require('esm')(module)('./index.js');
